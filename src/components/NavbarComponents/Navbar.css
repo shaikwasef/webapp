@@ -1,0 +1,16 @@
+.navbar-container {
+  width: 80vw;
+  height: 100%;
+  margin: auto;
+}
+
+.navbar-content-container {
+  width: 40%;
+  margin: auto;
+  z-index: 10;
+  font-weight: 200;
+}
+.navbar-content-container h3:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}

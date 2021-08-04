@@ -1,0 +1,11 @@
+.description-container {
+  background-image: url("../../../assets/images/homePage/description_image.jpeg");
+  width: 100vw;
+}
+
+.description-content {
+  text-align: left;
+  margin: auto;
+  max-width: 650px;
+  padding: 100px 0;
+}
