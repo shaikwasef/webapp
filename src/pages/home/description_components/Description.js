@@ -1,5 +1,5 @@
 import { Typography } from "@material-ui/core";
-import React from "react";
+import React, { Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import DescriptionVideo from "./DescriptionVideo";
 import "./Description.css";
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 function Description() {
   const classes = useStyles();
   return (
-    <>
+    <Fragment>
       <div className="description-container ">
         <article className="description-content d-flex flex-column align-items-start">
           <Typography variant="h6" style={{ color: "#ffc107" }}>
@@ -40,7 +40,7 @@ function Description() {
         </article>
       </div>
       <DescriptionVideo />
-    </>
+    </Fragment>
   );
 }
 

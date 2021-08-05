@@ -1,0 +1,12 @@
+.main-slide-container {
+  width: 220px;
+  margin: auto;
+}
+.home-main-carousel {
+  width: 500px;
+  height: 500px;
+}
+.main-each-slide > img {
+  width: 220px;
+  height: 140px;
+}

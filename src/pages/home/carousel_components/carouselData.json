@@ -1,0 +1,20 @@
+[
+  {
+    "url": "../../../assets/images/homePage/carousel/Joseph.jpeg",
+    "name": "Joseph Bradley",
+    "designation": "Head of Technology and Digital",
+    "quote": "NEOM is not about building a smart city, it is about building the first cognitive city, where world-class technology is fueled with data and intelligence to interact seamlessly with its population."
+  },
+  {
+    "url": "../../../assets/images/homePage/carousel/Gavin.jpeg",
+    "name": "Gavin van Tonder",
+    "designation": "Water Sector Head",
+    "quote": "NEOM’s sustainable approach will have a global impact on the water sector."
+  },
+  {
+    "url": "../../../assets/images/homePage/carousel/Giovanna.jpeg",
+    "name": "Giovanna Carnevali",
+    "designation": "Executive Director for Urban Planning",
+    "quote": "NEOM’s sustainable approach will have a global impact on the water sector."
+  }
+]

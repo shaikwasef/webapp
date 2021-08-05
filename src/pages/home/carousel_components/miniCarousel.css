@@ -1,0 +1,14 @@
+.slide-container {
+  width: 220px;
+  margin: auto;
+}
+
+.each-slide > img {
+  width: 220px;
+  height: 140px;
+}
+
+.directions {
+  color: #b89535;
+  cursor: pointer;
+}

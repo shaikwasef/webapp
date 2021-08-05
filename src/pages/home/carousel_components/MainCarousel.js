@@ -1,11 +1,8 @@
 import React, { useCallback, useRef } from "react";
 import { Fade } from "react-slideshow-image";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-import "./MiniCarousel.css";
-import "react-slideshow-image/dist/styles.css";
+import "./MainCarousel.css";
 
-function MiniCarousel({ direction, reference, slideRight, slideLeft }) {
-  const slideRef = useRef(null);
+function MainCarousel({ reference }) {
   const properties = {
     duration: 5000,
     autoplay: false,
@@ -14,6 +11,9 @@ function MiniCarousel({ direction, reference, slideRight, slideLeft }) {
     infinite: true,
     easing: "ease",
   };
+
+
+
   const slideImages = [
     "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
@@ -22,40 +22,20 @@ function MiniCarousel({ direction, reference, slideRight, slideLeft }) {
   ];
 
   return (
-    <div>
-      <div className="slide-container">
+    <div className="home-main-carousel">
+      <div className="main-slide-container">
         <Fade ref={reference} {...properties}>
           {slideImages.map((image, index) => {
             return (
-              <div key={index} className="each-slide">
+              <div key={index} className="main-each-slide">
                 <img className="lazy" src={image} alt="sample" />
               </div>
             );
           })}
         </Fade>
       </div>
-
-      <div className="slide-container buttons">
-        {direction === "right" ? (
-          <button className="directions" onClick={slideRight}>
-            <ArrowRightAltIcon fontSize="large" />
-          </button>
-        ) : (
-          <button
-            onClick={slideLeft}
-            className="directions"
-            onClick={slideLeft}
-          >
-            <ArrowRightAltIcon
-              className="directions"
-              fontSize="large"
-              style={{ transform: "rotate(180deg)" }}
-            />
-          </button>
-        )}
-      </div>
     </div>
   );
 }
 
-export default MiniCarousel;
+export default MainCarousel;
