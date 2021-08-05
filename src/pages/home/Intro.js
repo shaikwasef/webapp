@@ -4,9 +4,12 @@ import "./Intro.css";
 
 function Intro() {
   return (
-    <video playsInline autoPlay muted loop className="home-intro-video">
-      <source src={IntroVideo} type="video/mp4" />
-    </video>
+    <div className="intro-video-container">
+      <div className="intro-video-gradient"></div>
+      <video playsInline autoPlay muted loop className="home-intro-video">
+        <source src={IntroVideo} type="video/mp4" />
+      </video>
+    </div>
   );
 }
 

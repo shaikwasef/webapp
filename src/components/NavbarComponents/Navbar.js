@@ -15,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: "none",
     },
     width: "100vw",
+    zIndex: 10,
+    position: "relative",
   },
 
   logo: {
