@@ -1,0 +1,11 @@
+.description-video {
+  width: 100vw;
+  margin-top: -120px;
+}
+
+.home-intro-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+}
