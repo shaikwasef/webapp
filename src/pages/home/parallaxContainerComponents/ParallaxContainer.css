@@ -1,0 +1,42 @@
+.parallax-background {
+  background-image: url("/images/homePage/neon_desert.jpg");
+
+  /* Set a specific height */
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-content-container {
+  width: 100%;
+  min-height: 100vh;
+}
+.parallax-container {
+  margin-top: 140px;
+}
+
+.parallax-body {
+  width: 40vw;
+  margin: auto;
+  height: 100%;
+}
+
+.parallax-body > h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.parallax-body > h5 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.parallax-body > h6 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0;
+}

@@ -1,8 +1,10 @@
 import React from "react";
 import Intro from "./Intro";
 import "../../Styles/common.css";
-import Description from "./description_components/Description";
-import CarouselContainer from "./carousel_components/CarouselContainer";
+import Description from "./descriptionComponents/Description";
+import CarouselContainer from "./carouselComponents/CarouselContainer";
+import ParallaxContainer from "./parallaxContainerComponents/ParallaxContainer";
+import InfoContainer from "./infoContainerComponents/InfoContainer";
 
 function Home() {
   return (
@@ -10,6 +12,8 @@ function Home() {
       <Intro />
       <Description />
       <CarouselContainer />
+      <ParallaxContainer />
+      <InfoContainer />
     </div>
   );
 }

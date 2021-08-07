@@ -1,0 +1,72 @@
+.home-main-carousel {
+  width: 61%;
+  height: 100%;
+  margin-top: 80px;
+}
+.main-each-slide > img {
+  width: 55%;
+  height: 100%;
+}
+
+.main-each-slide {
+  height: 100%;
+  width: 120%;
+}
+
+.main-slide-container {
+  height: 100%;
+  width: 100%;
+}
+.main-slide-container > div {
+  height: 100%;
+  width: 100%;
+}
+.main-slide-container > div > .react-slideshow-container {
+  height: 100%;
+  width: 100%;
+}
+
+.main-slide-container
+  > div
+  > .react-slideshow-container
+  > .react-slideshow-fade-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+.main-slide-container
+  > div
+  > .react-slideshow-container
+  > .react-slideshow-fade-wrapper
+  > .react-slideshow-fade-images-wrap {
+  height: 100%;
+  width: 80%;
+}
+
+.main-carousel-quote {
+  text-align: start;
+  color: black;
+  font-weight: 100;
+  font-size: 25px;
+  width: 400px;
+  overflow: visible;
+}
+
+.main-carousel-credentials > p {
+  margin: 0;
+  text-align: start;
+  color: black;
+  font-weight: 100;
+}
+
+.quote-icon {
+  transform: rotate(180deg);
+  color: #b89535;
+  margin-left: -15px;
+}
+
+.main-carousel-article {
+  position: relative;
+  top: 25%;
+}

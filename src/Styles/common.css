@@ -42,6 +42,34 @@
   align-items: stretch;
 }
 
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
 .common-grey-color {
   color: rgb(190, 190, 190);
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.flex-gap-0 {
+  gap: 0px;
+}
+
+.flex-gap-20 {
+  gap: 20px;
+}
+
+.flex-gap-40 {
+  gap: 40px;
+}
+
+.flex-gap-80 {
+  gap: 80px;
 }

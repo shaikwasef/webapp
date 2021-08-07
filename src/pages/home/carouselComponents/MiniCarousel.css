@@ -1,0 +1,45 @@
+.slide-container {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  z-index: 10;
+}
+
+.slide-container-left {
+  position: relative;
+  left: -50px;
+}
+
+.slide-container-right {
+  position: relative;
+  left: 50px;
+}
+
+.each-slide > img {
+  height: 180px;
+  width: 220px;
+}
+
+.directions {
+  color: #b89535;
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+  z-index: 10;
+}
+
+.right-arrow {
+  left: 80px;
+}
+
+.left-arrow {
+  right: 80px;
+}
+
+.article-end {
+  margin-right: 70px;
+}
+
+.article-start {
+  margin-left: 70px;
+}

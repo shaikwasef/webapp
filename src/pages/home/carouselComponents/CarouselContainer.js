@@ -28,17 +28,16 @@ function CarouselContainer() {
     return arr;
   };
 
-  console.log(data);
-
   return (
     <div className="home-carousel">
-      <div className="carousel-container d-flex">
+      <div className="carousel-container d-flex ">
         <MiniCarousel
           direction="left"
           reference={leftCarousel}
           slideLeft={slideLeft}
           slideRight={slideRight}
           slideData={shiftArrayBy(0, ...data)}
+          textSide="left"
         />
         <MainCarousel
           reference={middleCarousel}
@@ -50,6 +49,7 @@ function CarouselContainer() {
           slideLeft={slideLeft}
           slideRight={slideRight}
           slideData={shiftArrayBy(2, ...data)}
+          textSide="right"
         />
       </div>
     </div>
