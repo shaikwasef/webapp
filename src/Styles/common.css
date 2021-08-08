@@ -54,6 +54,9 @@
   color: rgb(190, 190, 190);
 }
 
+.m-auto {
+  margin: auto;
+}
 .mb-40 {
   margin-bottom: 40px;
 }

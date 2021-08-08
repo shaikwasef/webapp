@@ -9,6 +9,16 @@
   background-size: cover;
 }
 
+.parallax-background-bottom {
+  background-image: url("/images/homePage/neon_desert.jpg");
+
+  /* Set a specific height */
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .parallax-content-container {
   width: 100%;
   min-height: 100vh;

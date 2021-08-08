@@ -1,0 +1,31 @@
+.home-info-container {
+  width: 100vw;
+  height: 85vh;
+  gap: 50px;
+}
+
+.info-snippet-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.info-snippet {
+  width: fit-content;
+  margin: auto;
+}
+
+.info-snippet-value {
+  color: #b89535;
+  font-size: 89px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.info-snippet-desc {
+  font-weight: 300;
+  color: black;
+  width: 120px;
+  text-align: start;
+}

@@ -8,7 +8,7 @@ import InfoContainer from "./infoContainerComponents/InfoContainer";
 
 function Home() {
   return (
-    <div className="d-flex flex-column">
+    <div className=" d-flex flex-column">
       <Intro />
       <Description />
       <CarouselContainer />

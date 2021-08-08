@@ -7,7 +7,7 @@
 .navbar-content-container {
   width: 40%;
   margin: auto;
-  z-index: 10;
+  z-index: 100;
   font-weight: 200;
 }
 .navbar-content-container h3:hover {

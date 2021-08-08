@@ -6,10 +6,12 @@ import "./Intro.css";
 function Intro() {
   return (
     <div className="intro-video-container">
-      <div className="intro-video-gradient"></div>
-      <Video classname="home-intro-video" video={IntroVideo} />
+      
+      <Video classname="home-intro-video" video={IntroVideo} /> 
     </div>
   );
 }
 
 export default Intro;
+
+{/* <div className="intro-video-gradient"></div>; */}

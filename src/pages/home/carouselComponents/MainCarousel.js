@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React from "react";
 import { Fade } from "react-slideshow-image";
 import "./MainCarousel.css";
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
@@ -34,7 +34,6 @@ function MainCarousel({ reference, slideData }) {
     easing: "ease",
   };
 
-  console.log(slideData);
   return (
     <div className="home-main-carousel">
       <div className="main-slide-container">
