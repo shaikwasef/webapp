@@ -11,8 +11,6 @@
 .main-each-slide {
   height: 100%;
   width: 120%;
-  position: relative;
-  z-index: -10;
 }
 
 .main-slide-container {
@@ -49,9 +47,9 @@
 .main-carousel-quote {
   text-align: start;
   color: black;
-  font-weight: 100;
-  font-size: 25px;
-  width: 400px;
+  font-weight: 300;
+  font-size: 20px;
+  width: 300px;
   overflow: visible;
 }
 
@@ -70,7 +68,7 @@
 
 .main-carousel-article {
   position: relative;
-  top: 25%;
-  z-index: -10;
+  top: 15%;
   left: 60px;
+  width: 30%;
 }

@@ -93,7 +93,7 @@ function MiniCarousel({
                     {item.designation}
                   </Typography>
                 </article>
-                <img className="lazy " src={item.url} alt="sample" />
+                <img className="lazy" src={item.url} alt="sample" />
               </div>
             );
           })}

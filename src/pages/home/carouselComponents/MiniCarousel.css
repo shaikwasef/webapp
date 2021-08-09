@@ -2,17 +2,16 @@
   width: 250px;
   height: 250px;
   margin: auto;
-  z-index: 10;
 }
 
 .slide-container-left {
   position: relative;
-  left: -50px;
+  left: -70px;
 }
 
 .slide-container-right {
   position: relative;
-  left: 50px;
+  left: 30px;
 }
 
 .each-slide > img {
@@ -25,11 +24,10 @@
   cursor: pointer;
   position: relative;
   top: 20px;
-  z-index: 20;
 }
 
 .right-arrow {
-  left: 80px;
+  left: 40px;
 }
 
 .left-arrow {
@@ -37,9 +35,9 @@
 }
 
 .article-end {
-  margin-right: 70px;
+  margin-right: 90px;
 }
 
 .article-start {
-  margin-left: 70px;
+  margin-left: 90px;
 }

@@ -6,3 +6,13 @@
   scroll-behavior: smooth;
   overflow-y: hidden;
 }
+
+.app-navbar {
+  position: relative;
+  z-index: 2;
+}
+
+.app-home {
+  position: relative;
+  z-index: 1;
+}

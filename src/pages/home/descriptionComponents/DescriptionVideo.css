@@ -14,7 +14,7 @@
   );
   position: relative;
   top: 0;
-  z-index: 100;
+  z-index: -4;
 }
 
 .description-video {
@@ -23,4 +23,6 @@
   object-fit: cover;
   width: 100vw;
   height: 100vh;
+  position: relative;
+  z-index: -5;
 }

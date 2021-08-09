@@ -6,8 +6,12 @@ import Home from "./pages/home/Home";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
+      <div className="app-navbar">
+        <Navbar />
+      </div>
+      <div className="app-home">
+        <Home />
+      </div>
     </div>
   );
 }

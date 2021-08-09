@@ -15,7 +15,7 @@ function Home() {
   };
 
   return (
-    <div className=" d-flex flex-column">
+    <div className="home d-flex flex-column">
       <Intro onScrollClick={onScrollClick} />
       <Description reference={scrollRef} />
       <CarouselContainer />

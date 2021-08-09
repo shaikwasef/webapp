@@ -4,6 +4,7 @@ import MiniCarousel from "./MiniCarousel";
 import MainCarousel from "./MainCarousel";
 import data from "./carouselData.json";
 import Fade from "react-reveal/Fade";
+import { Fragment } from "react";
 
 function CarouselContainer() {
   const leftCarousel = useRef(null);
