@@ -6,6 +6,17 @@
 .description-content {
   text-align: left;
   margin: auto;
-  max-width: 650px;
+  width: 650px;
   padding: 100px 0;
+}
+
+.description-heading {
+  font-weight: 600;
+  font-size: 50px;
+  letter-spacing: 0.12em;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px 15px;
 }

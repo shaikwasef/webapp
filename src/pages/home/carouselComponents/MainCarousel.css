@@ -11,6 +11,8 @@
 .main-each-slide {
   height: 100%;
   width: 120%;
+  position: relative;
+  z-index: -10;
 }
 
 .main-slide-container {
@@ -69,4 +71,6 @@
 .main-carousel-article {
   position: relative;
   top: 25%;
+  z-index: -10;
+  left: 60px;
 }

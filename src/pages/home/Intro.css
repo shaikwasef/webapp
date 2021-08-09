@@ -21,6 +21,14 @@
   background-color: rgb(0, 0, 0);
 }
 
+.intro-mouse-scroller {
+  position: absolute;
+  top: 850px;
+  right: 50%;
+  z-index: 20;
+  cursor: pointer;
+}
+
 @keyframes fade-black {
   0% {
     height: 100vh;

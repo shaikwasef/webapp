@@ -3,6 +3,7 @@ import "./CarouselContainer.css";
 import MiniCarousel from "./MiniCarousel";
 import MainCarousel from "./MainCarousel";
 import data from "./carouselData.json";
+import Fade from "react-reveal/Fade";
 
 function CarouselContainer() {
   const leftCarousel = useRef(null);
@@ -31,26 +32,31 @@ function CarouselContainer() {
   return (
     <div className="home-carousel">
       <div className="carousel-container d-flex ">
-        <MiniCarousel
-          direction="left"
-          reference={leftCarousel}
-          slideLeft={slideLeft}
-          slideRight={slideRight}
-          slideData={shiftArrayBy(0, ...data)}
-          textSide="left"
-        />
+        <Fade left>
+          <MiniCarousel
+            direction="left"
+            reference={leftCarousel}
+            slideLeft={slideLeft}
+            slideRight={slideRight}
+            slideData={shiftArrayBy(0, ...data)}
+            textSide="left"
+          />
+        </Fade>
         <MainCarousel
           reference={middleCarousel}
           slideData={shiftArrayBy(1, ...data)}
         />
-        <MiniCarousel
-          direction="right"
-          reference={rightCarousel}
-          slideLeft={slideLeft}
-          slideRight={slideRight}
-          slideData={shiftArrayBy(2, ...data)}
-          textSide="right"
-        />
+
+        <Fade right>
+          <MiniCarousel
+            direction="right"
+            reference={rightCarousel}
+            slideLeft={slideLeft}
+            slideRight={slideRight}
+            slideData={shiftArrayBy(2, ...data)}
+            textSide="right"
+          />
+        </Fade>
       </div>
     </div>
   );

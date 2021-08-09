@@ -1,6 +1,6 @@
 import React from "react";
 import video from "../../../assets/videos/homePage/home_description_video.mp4";
-import Video from "../../../components/Video";
+import Video from "../../../components/VideoComponent/Video";
 import "./DescriptionVideo.css";
 
 function DescriptionVideo() {

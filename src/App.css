@@ -4,4 +4,5 @@
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-y: hidden;
 }

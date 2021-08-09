@@ -8,9 +8,13 @@
   width: 40%;
   margin: auto;
   z-index: 100;
-  font-weight: 200;
 }
 .navbar-content-container h3:hover {
   cursor: pointer;
   color: rgb(255, 255, 255);
+}
+
+.navbar-content-container > h3 {
+  font-weight: 350;
+  font-size: 20px;
 }

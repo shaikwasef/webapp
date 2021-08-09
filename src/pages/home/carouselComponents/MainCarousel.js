@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
+import Fader from "react-reveal/Fade";
 import "./MainCarousel.css";
 import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
 import { Button, makeStyles } from "@material-ui/core";
@@ -40,22 +41,26 @@ function MainCarousel({ reference, slideData }) {
         <Fade ref={reference} {...properties}>
           {slideData.map((item, index) => {
             return (
-              <div key={index} className="main-each-slide d-flex  flex-gap-80">
-                <img className="lazy" src={item.url} alt="sample" />
-                <article className="d-flex flex-column flex-gap-20 main-carousel-article ">
-                  <FormatQuoteIcon
-                    style={{ fontSize: "100px" }}
-                    className="quote-icon"
-                  />
-                  <h3 className="main-carousel-quote">{item.quote}</h3>
-                  <div className="d-flex flex-column main-carousel-credentials">
-                    <p style={{ fontWeight: "bolder" }}>{item.name}</p>
-                    <p>{item.designation}</p>
-                  </div>
-                  <Button className={classes.watch}>
-                    WATCH <PlayArrowOutlinedIcon />
-                  </Button>
-                </article>
+              <div key={index} className="main-each-slide d-flex ">
+                <Fader bottom>
+                  <img className="lazy" src={item.url} alt="sample" />
+                </Fader>
+                <Fader bottom>
+                  <article className="d-flex flex-column flex-gap-20 main-carousel-article ">
+                    <FormatQuoteIcon
+                      style={{ fontSize: "100px" }}
+                      className="quote-icon"
+                    />
+                    <h3 className="main-carousel-quote">{item.quote}</h3>
+                    <div className="d-flex flex-column main-carousel-credentials">
+                      <p style={{ fontWeight: "bolder" }}>{item.name}</p>
+                      <p>{item.designation}</p>
+                    </div>
+                    <Button className={classes.watch}>
+                      WATCH <PlayArrowOutlinedIcon />
+                    </Button>
+                  </article>
+                </Fader>
               </div>
             );
           })}
