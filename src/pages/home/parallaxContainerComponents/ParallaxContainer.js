@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+import Fade from "react-reveal/Fade";
 import "./ParallaxContainer.css";
+import "../../../Styles/common.css";
 
 function ParallaxContainer() {
   useEffect(() => {
@@ -13,7 +15,9 @@ function ParallaxContainer() {
         element.classList.add("parallax-background");
       }
     });
-  });
+    return () => window.removeEventListener("scroll");
+  }, []);
+
   return (
     <div className="parallax-container">
       <div className="parallax-background" id="parallax-div">
@@ -21,9 +25,16 @@ function ParallaxContainer() {
           <div className="parallax-body d-flex flex-column flex-gap-40">
             <h5>THE LINE</h5>
             <h1>ENABLES FUTURE-PROOF URBANIZATION</h1>
-            <h6>
-              One of the main projects for NEOM is THE LINE, the core of its
-              urban living.
+            <h6 className="d-flex">
+              {"One of the main projects for NEOM is THE LINE, the core of its urban living."
+                .split(" ")
+                .map((item, index) => {
+                  return (
+                    <Fade bottom delay={100 * index}>
+                      {item}
+                    </Fade>
+                  );
+                })}
             </h6>
           </div>
         </div>

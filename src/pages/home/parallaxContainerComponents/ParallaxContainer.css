@@ -28,7 +28,7 @@
 }
 
 .parallax-body {
-  width: 40vw;
+  width: 35vw;
   margin: auto;
   height: 100%;
 }
@@ -41,12 +41,13 @@
 
 .parallax-body > h5 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
 }
 
 .parallax-body > h6 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 300;
   margin: 0;
+  column-gap: 10px;
 }

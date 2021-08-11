@@ -9,10 +9,10 @@ import "../../Styles/common.css";
 //:TODO need to change logic for navbar
 
 const introNavBarHeight = 120;
-const newNavBarHeight = 80;
+const newNavBarHeight = 100;
 
 const useStyles = makeStyles((theme) => ({
-  navbar: {
+  defaultNavbar: {
     "&.MuiAppBar-root": {
       height: introNavBarHeight.toString() + "px",
     },
@@ -22,9 +22,34 @@ const useStyles = makeStyles((theme) => ({
     },
     width: "100vw",
     position: "fixed",
+    backgroundColor: "transparent",
+    height: introNavBarHeight.toString() + "px",
   },
 
-  newNavbar: {
+  mainPageNavbar: {
+    "&.MuiAppBar-root": {
+      height: introNavBarHeight.toString() + "px",
+    },
+    borderBottom: "0.3px solid rgba(180, 180, 180,0.7)",
+    "&.MuiPaper-elevation ": {
+      boxShadow: "none",
+    },
+    width: "100vw",
+    position: "fixed",
+    animation: `$mainNavBarEffect 1s ease-in-out`,
+    animationFillMode: "forwards",
+  },
+  "@keyframes mainNavBarEffect": {
+    "0%": {
+      height: newNavBarHeight.toString() + "px",
+    },
+    "100%": {
+      height: introNavBarHeight.toString() + "px",
+      backgroundColor: "transparent",
+    },
+  },
+
+  newUpNavBar: {
     "&.MuiAppBar-root": {
       height: newNavBarHeight.toString() + "px",
     },
@@ -34,12 +59,43 @@ const useStyles = makeStyles((theme) => ({
     },
     width: "100vw",
     position: "fixed",
-    backgroundColor: "#5E5E5E",
-    animation: "$myEffectNavBar",
+    animation: `$effectUpNavBar 0.2s ease-in-out`,
     animationFillMode: "forwards",
-    animationDelay: "2000ms",
+  },
+  "@keyframes effectUpNavBar": {
+    "0%": {
+      height: 0 + "px",
+      overflow: "hidden",
+    },
+    "100%": {
+      height: newNavBarHeight + "px",
+      backgroundColor: "#1d1f22",
+    },
   },
 
+  newDownNavbar: {
+    "&.MuiAppBar-root": {
+      height: newNavBarHeight.toString() + "px",
+    },
+    borderBottom: "0.3px solid rgba(180, 180, 180,0.7)",
+    "&.MuiPaper-elevation ": {
+      boxShadow: "none",
+    },
+    width: "100vw",
+    position: "fixed",
+    animation: `$effectDownNavBar 1s ease-in-out`,
+    animationFillMode: "forwards",
+  },
+  "@keyframes effectDownNavBar": {
+    "0%": {
+      height: introNavBarHeight.toString() + "px",
+      backgroundColor: "transparent",
+    },
+    "100%": {
+      height: 0 + "px",
+      overflow: "hidden",
+    },
+  },
   logo: {
     height: "60%",
     position: "relative",
@@ -49,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar() {
   const classes = useStyles();
-  const [navbarStatus, setNavbatStatus] = useState(false);
+  const [navbarStatus, setNavbarStatus] = useState("default");
 
   useEffect(() => {
     window.addEventListener("scroll", transitionNavBar);
@@ -57,19 +113,37 @@ function Navbar() {
   }, []);
 
   function transitionNavBar() {
-    if (window.scrollY > window.innerHeight) {
-      setNavbatStatus(true);
-    } else {
-      setNavbatStatus(false);
+    if (this.oldScroll > this.scrollY && window.scrollY > window.innerHeight) {
+      setNavbarStatus("up_other_screen");
+    } else if (
+      this.oldScroll > this.scrollY &&
+      window.scrollY < window.innerHeight - newNavBarHeight + 20
+    ) {
+      setNavbarStatus("up_main_screen");
+    } else if (this.oldScroll < this.scrollY) {
+      setNavbarStatus("down");
+    }
+    this.oldScroll = this.scrollY;
+  }
+
+  function setNavBarClass() {
+    if (navbarStatus === "default") {
+      return classes.defaultNavbar;
+    }
+    if (navbarStatus === "up_main_screen") {
+      return classes.mainPageNavbar;
+    }
+    if (navbarStatus === "down") {
+      return classes.newDownNavbar;
+    }
+    if (navbarStatus === "up_other_screen") {
+      return classes.newUpNavBar;
     }
   }
 
   return (
-    <Fade delay={400}>
-      <AppBar
-        className={navbarStatus ? classes.newNavbar : classes.navbar}
-        color="transparent"
-      >
+    <Fade delay={400} force>
+      <AppBar className={setNavBarClass()} color="transparent">
         <div className="navbar-container d-flex justify-content-between align-items-center">
           <img src={NeomLogo} className={classes.logo} alt="company-logo" />
           <div className="navbar-content-container common-grey-color d-flex justify-content-between align-items-center">
