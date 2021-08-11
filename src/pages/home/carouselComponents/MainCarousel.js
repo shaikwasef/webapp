@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//Main carouse component
 function MainCarousel({ reference, slideData }) {
   const classes = useStyles();
   const properties = {

@@ -6,15 +6,15 @@ import "./Navbar.css";
 import Fade from "react-reveal/Fade";
 import "../../Styles/common.css";
 
-//:TODO need to change logic for navbar
-
-const introNavBarHeight = 120;
+// Navbar switches between two different heights depending on its position
+const mainNavBarHeight = 120;
 const newNavBarHeight = 100;
 
+//classes to implement navbar animation
 const useStyles = makeStyles((theme) => ({
   defaultNavbar: {
     "&.MuiAppBar-root": {
-      height: introNavBarHeight.toString() + "px",
+      height: mainNavBarHeight.toString() + "px",
     },
     borderBottom: "0.3px solid rgba(180, 180, 180,0.7)",
     "&.MuiPaper-elevation ": {
@@ -23,12 +23,12 @@ const useStyles = makeStyles((theme) => ({
     width: "100vw",
     position: "fixed",
     backgroundColor: "transparent",
-    height: introNavBarHeight.toString() + "px",
+    height: mainNavBarHeight.toString() + "px",
   },
 
   mainPageNavbar: {
     "&.MuiAppBar-root": {
-      height: introNavBarHeight.toString() + "px",
+      height: mainNavBarHeight.toString() + "px",
     },
     borderBottom: "0.3px solid rgba(180, 180, 180,0.7)",
     "&.MuiPaper-elevation ": {
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
       height: newNavBarHeight.toString() + "px",
     },
     "100%": {
-      height: introNavBarHeight.toString() + "px",
+      height: mainNavBarHeight.toString() + "px",
       backgroundColor: "transparent",
     },
   },
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
   "@keyframes effectDownNavBar": {
     "0%": {
-      height: introNavBarHeight.toString() + "px",
+      height: newNavBarHeight.toString() + "px",
       backgroundColor: "transparent",
     },
     "100%": {
@@ -105,27 +105,34 @@ const useStyles = makeStyles((theme) => ({
 
 function Navbar() {
   const classes = useStyles();
+  //sets state depending on navbar position (refer transitionNavBar)
   const [navbarStatus, setNavbarStatus] = useState("default");
 
+  //Attaches event listener to window on mount
   useEffect(() => {
     window.addEventListener("scroll", transitionNavBar);
     return () => window.removeEventListener("scroll", transitionNavBar);
   }, []);
 
+  //sets the state of the Navbar depending on its position
   function transitionNavBar() {
     if (this.oldScroll > this.scrollY && window.scrollY > window.innerHeight) {
       setNavbarStatus("up_other_screen");
+      console.log("up_other_screen");
     } else if (
       this.oldScroll > this.scrollY &&
       window.scrollY < window.innerHeight - newNavBarHeight + 20
     ) {
       setNavbarStatus("up_main_screen");
+      console.log("up_main_screen");
     } else if (this.oldScroll < this.scrollY) {
       setNavbarStatus("down");
+      console.log("down");
     }
     this.oldScroll = this.scrollY;
   }
 
+  //choose navabar class depending on the state
   function setNavBarClass() {
     if (navbarStatus === "default") {
       return classes.defaultNavbar;
@@ -142,6 +149,7 @@ function Navbar() {
   }
 
   return (
+    // Force navbar animation irrespective of position of scroll
     <Fade delay={400} force>
       <AppBar className={setNavBarClass()} color="transparent">
         <div className="navbar-container d-flex justify-content-between align-items-center">

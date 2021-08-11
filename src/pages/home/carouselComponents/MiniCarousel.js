@@ -47,6 +47,7 @@ function MiniCarousel({
     easing: "ease",
   };
 
+  //Mini carousel component
   return (
     <div>
       <div

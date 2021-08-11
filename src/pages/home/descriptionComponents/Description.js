@@ -5,6 +5,7 @@ import DescriptionVideo from "./DescriptionVideo";
 import Fade from "react-reveal/Fade";
 import "./Description.css";
 
+//styles ofr material ui components
 const useStyles = makeStyles((theme) => ({
   descriptionHeading: {
     "&.MuiTypography-h1": {
@@ -18,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+//Component in page 2 of the Home page
 function Description({ reference }) {
   const classes = useStyles();
   return (

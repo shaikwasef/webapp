@@ -6,6 +6,7 @@ import data from "./carouselData.json";
 import Fade from "react-reveal/Fade";
 import { Fragment } from "react";
 
+//Main carousel component from page 3
 function CarouselContainer() {
   const leftCarousel = useRef(null);
   const rightCarousel = useRef(null);
@@ -30,6 +31,7 @@ function CarouselContainer() {
     return arr;
   };
 
+  // The carousel component contains two major carousels and one minor carousel
   return (
     <div className="home-carousel">
       <div className="carousel-container d-flex ">

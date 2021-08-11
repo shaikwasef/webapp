@@ -1,9 +1,9 @@
 import React from "react";
 import IntroVideo from "../../assets/videos/homePage/home_intro_video.mp4";
 import ScrollingMouse from "../../components/ScrollingMouseComponent/ScrollingMouse";
-import Video from "../../components/VideoComponent/Video";
 import "./Intro.css";
 
+//Intro component (with video and scrolling mouse animation)
 function Intro({ onScrollClick }) {
   return (
     <div className="intro-video-container">
@@ -18,7 +18,3 @@ function Intro({ onScrollClick }) {
 }
 
 export default Intro;
-
-{
-  /* <div className="intro-video-gradient"></div>; */
-}

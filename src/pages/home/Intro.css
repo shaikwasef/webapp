@@ -23,7 +23,7 @@
 
 .intro-mouse-scroller {
   position: absolute;
-  top: 95%;
+  top: 18%;
   right: 50%;
   z-index: 20;
   cursor: pointer;

@@ -3,7 +3,10 @@ import Fade from "react-reveal/Fade";
 import "./ParallaxContainer.css";
 import "../../../Styles/common.css";
 
+//Page 4 component on Home page
+
 function ParallaxContainer() {
+  //Using JS to replicate parallax scrollign
   useEffect(() => {
     const element = document.getElementById("parallax-div");
     window.addEventListener("scroll", function () {

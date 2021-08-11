@@ -2,6 +2,7 @@ import React from "react";
 import "./InfoContainer.css";
 import "../../../Styles/common.css";
 
+//Page 5 component on Home page
 function InfoContainer() {
   return (
     <div className="home-info-container d-flex flex-column justify-content-center">
